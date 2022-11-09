@@ -37,7 +37,8 @@ Coded by www.creative-tim.com
 
 // Material Dashboard 2 React layouts
 import Dashboard from "layouts/dashboard";
-import Tables from "layouts/tables";
+import Tables from "layouts/tables/index";
+import Merfish from "layouts/tables/merfish_index";
 
 // @mui icons
 import Icon from "@mui/material/Icon";
@@ -53,11 +54,19 @@ const routes = [
   },
   {
     type: "collapse",
-    name: "Tables",
+    name: "RNASeq",
     key: "tables",
     icon: <Icon fontSize="small">table_view</Icon>,
     route: "/tables",
     component: <Tables />,
+  },
+  {
+    type: "collapse",
+    name: "MERFISH",
+    key: "merfish",
+    icon: <Icon fontSize="small">table_view</Icon>,
+    route: "/merfish",
+    component: <Merfish />,
   },
 ];
 

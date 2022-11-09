@@ -28,10 +28,10 @@ import Footer from "examples/Footer";
 import DataTable from "examples/Tables/DataTable";
 
 // Data
-import rnaseqTableData from "layouts/tables/data/rnaseqTableData";
+import merfishTableData from "layouts/tables/data/merfishTableData";
 
-function Tables() {
-  const { columns, rows } = rnaseqTableData();
+function Merfish() {
+  const { columns: pColumns, rows: pRows } = merfishTableData();
 
   return (
     <DashboardLayout>
@@ -51,12 +51,12 @@ function Tables() {
                 coloredShadow="info"
               >
                 <MDTypography variant="h6" color="white">
-                  Cell Types
+                  Merfish Clusters
                 </MDTypography>
               </MDBox>
               <MDBox pt={3}>
                 <DataTable
-                  table={{ columns, rows }}
+                  table={{ columns: pColumns, rows: pRows }}
                   isSorted={false}
                   entriesPerPage={false}
                   showTotalEntries={false}
@@ -72,4 +72,4 @@ function Tables() {
   );
 }
 
-export default Tables;
+export default Merfish;

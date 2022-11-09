@@ -25,7 +25,7 @@ import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 import ReportsBarChart from "examples/Charts/BarCharts/ReportsBarChart";
 
 // Images
-import Icon1 from "../../assets/images/bruce-mars.jpg";
+import Icon1 from "../../assets/images/plant.png";
 
 function Dashboard() {
   return (

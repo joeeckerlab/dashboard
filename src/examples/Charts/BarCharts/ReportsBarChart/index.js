@@ -62,7 +62,10 @@ function ReportsBarChart({ color, title, description, icon, date }) {
             <MDTypography variant="button" color="text" lineHeight={1} sx={{ mt: 0.15, mr: 0.5 }}>
               <Icon>start</Icon>
             </MDTypography>
-            <a href="https://cellxgene.cziscience.com/" className="DatasetLink">
+            <a
+              href="https://cellxgene.cziscience.com/e/3faad104-2ab8-4434-816d-474d8d2641db.cxg/"
+              className="DatasetLink"
+            >
               {date}
             </a>
           </MDBox>

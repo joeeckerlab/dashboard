@@ -57,7 +57,7 @@ const routes = [
     name: "RNASeq",
     key: "tables",
     icon: <Icon fontSize="small">table_view</Icon>,
-    route: "/tables",
+    route: "/rnaseq",
     component: <Tables />,
   },
   {

@@ -14,12 +14,10 @@ Coded by www.creative-tim.com
 */
 
 import { useMemo } from "react";
+import "./style.css";
 
 // porp-types is a library for typechecking of props
 import PropTypes from "prop-types";
-
-// react-chartjs-2 components
-import { Bar } from "react-chartjs-2";
 
 // @mui material components
 import Card from "@mui/material/Card";
@@ -30,12 +28,7 @@ import Icon from "@mui/material/Icon";
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 
-// ReportsBarChart configurations
-import configs from "examples/Charts/BarCharts/ReportsBarChart/configs";
-
-function ReportsBarChart({ color, title, description, date, chart }) {
-  const { data, options } = configs(chart.labels || [], chart.datasets || {});
-
+function ReportsBarChart({ color, title, description, icon, date }) {
   return (
     <Card sx={{ height: "100%" }}>
       <MDBox padding="1rem">
@@ -50,11 +43,12 @@ function ReportsBarChart({ color, title, description, date, chart }) {
               pr={0.5}
               mt={-5}
               height="12.5rem"
+              icon={icon}
             >
-              <Bar data={data} options={options} />
+              <img src={icon} className="photo" alt={icon} />
             </MDBox>
           ),
-          [chart, color]
+          [icon, color]
         )}
         <MDBox pt={3} pb={1} px={1}>
           <MDTypography variant="h6" textTransform="capitalize">
@@ -66,11 +60,11 @@ function ReportsBarChart({ color, title, description, date, chart }) {
           <Divider />
           <MDBox display="flex" alignItems="center">
             <MDTypography variant="button" color="text" lineHeight={1} sx={{ mt: 0.15, mr: 0.5 }}>
-              <Icon>schedule</Icon>
+              <Icon>start</Icon>
             </MDTypography>
-            <MDTypography variant="button" color="text" fontWeight="light">
+            <a href="https://cellxgene.cziscience.com/" className="DatasetLink">
               {date}
-            </MDTypography>
+            </a>
           </MDBox>
         </MDBox>
       </MDBox>
@@ -90,7 +84,7 @@ ReportsBarChart.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   date: PropTypes.string.isRequired,
-  chart: PropTypes.objectOf(PropTypes.oneOfType([PropTypes.array, PropTypes.object])).isRequired,
+  icon: PropTypes.objectOf(PropTypes.oneOfType([PropTypes.array, PropTypes.object])).isRequired,
 };
 
 export default ReportsBarChart;

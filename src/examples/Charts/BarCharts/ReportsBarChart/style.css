@@ -1,0 +1,14 @@
+
+.photo {
+    height: 160px;
+    width: 300px;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+}
+
+.DatasetLink {
+    font-size: medium;
+    color: black;
+}
